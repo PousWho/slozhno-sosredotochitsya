@@ -1,0 +1,13 @@
+:root {
+  --accent-color: rgb(255, 0, 112);
+  --accent-font: font-family: 'IBM Plex mono';
+  --accent-font-color: rgb(241, 178, 206);
+  --title-dark: rgb(219, 0, 255);
+  --p-text: rgb(0, 0, 40);
+  --p-title: #FF0070;
+  
+}
+/*
+  Переменные для вашего проекта
+  и их переопределение под различные устройства
+*/

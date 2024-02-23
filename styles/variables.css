@@ -5,7 +5,9 @@
   --title-dark: rgb(219, 0, 255);
   --p-text: rgb(0, 0, 40);
   --p-title: #FF0070;
-  
+  --display-rec: block;
+  --decorations: rgb(255, 0, 112);
+  --light-shadow: rgb(255, 0, 112);
 }
 /*
   Переменные для вашего проекта

@@ -1,5 +1,4 @@
 
-
 .page {
   background-image: url(../images/cover-image-dark.png);
   background-size: cover; 
@@ -22,8 +21,8 @@
   content: '';
   position: absolute;
   display: block;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--decorations);
+  border-block-start: 1px solid var(--decorations);
   block-size: 25px;
   inline-size: 25px;
   inset-inline-end: 0;
@@ -34,26 +33,18 @@
   content: '';
   position: absolute;
   display: block;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--decorations);
+  border-block-end: 1px solid var(--decorations);
   block-size: 25px;
   inline-size: 25px;
   inset-inline-start: 0;
   inset-block-end: 20px;
 }
 
-.decorative__header__top {
-  position: absolute;
-  top: 0;
-  right: 0;   
-  border-right: 1px solid var(--accent-color);
-  border-top: 1px solid var(--accent-color);
-  width: 25px;
-  height: 25px;
-}
 
 .rec {
   position: absolute;
+  display: var(--display-rec);
   inset-inline-end: 28px;
   inset-block-start: 0;
   color: var(--accent-color);
@@ -86,20 +77,11 @@
   font-family: IBM Plex Mono, sans-serif;
 }
 
- /*color: var(--title-dark);
-  font-family: IBM Plex Mono, sans-serif;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  text-shadow: 4px 4px 0 var(--accent-color);
-  font-weight: 700;
-  line-height: 82.5%;
-  letter-spacing: 0%;
-  text-align: center;
-  max-block-size: 57px; */
 
 .header__theme-menu-button{
   border: 1px solid transparent;
   padding: 2px 12px;
-  color: var(--secondary-color, #ff0070);
+  color: var(--decorations);
   line-height: 18px;
   text-transform: lowercase;
   background: transparent;
@@ -111,6 +93,18 @@
   letter-spacing: 0%;
 }
 
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--decorations);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:active {
+  border: 1px solid var(--decorations);
+}
+
 .header__theme-menu {
   justify-self: end;
 }
@@ -120,17 +114,18 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
-  list-style-type: none;  
+  list-style-type: none; 
+  display: flex;
+  flex-direction: column;
+  gap: 12px; 
 }
 
-.header__theme-menu-item {
-  padding: 6px 0;
-}
 
 .header__theme-menu-item:hover {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--decorations);
   padding: 0;
 }
+
 
 .header__p{
   justify-self: center;
@@ -145,14 +140,6 @@
   text-align: left;
 }
 
-.decorative__header__bottom {
-  position: absolute;
-  bottom: 0;   
-  border-left: 1px solid var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
-  width: 25px;
-  height: 25px;
-}
 
 .main {
   display: grid;
@@ -200,19 +187,21 @@
   text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
 }
-/*.card-text-link {
-  text-decoration: none;
-  text-shadow: 2px 2px 0 var(--accent-color, #ff8dcb);
-}
 
-.card-text-link:hover {
-  border-bottom: 1px solid var(--text-color, #353430);
-}*/
 .p__shadow:hover {
   text-decoration-line: underline; /* Задаем только одно подчеркивание */
   text-decoration-color: var(--accent-font-color); /* Цвет подчеркивания при наведении */
   text-decoration-thickness: 2px;
   text-shadow: none;
+  cursor: pointer;
+}
+
+.p__shadow:focus-visible { 
+  border: 1px solid rgb(53, 52, 48);
+}
+
+.p__shadow:focus {
+  outline: none;
 }
 
 .p-1 {
@@ -230,14 +219,6 @@
   gap: 16px;
 }
 
-/*.cards {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 10px;
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
-}*/
 
 .gallery {
   display: grid;
@@ -265,14 +246,15 @@
   justify-content: center;
   padding-bottom: 40px;
   padding-left: 20px;
+  text-shadow: 4px 4px 0 var(--light-shadow);
 }
 
 .footer::before {
   content: '';
   position: absolute;
   display: block;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--decorations);
+  border-block-start: 1px solid var(--decorations);
   block-size: 25px;
   inline-size: 25px;
   inset-inline-end: 0;
@@ -283,8 +265,8 @@
   content: '';
   position: absolute;
   display: block;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--decorations);
+  border-block-end: 1px solid var(--decorations);
   block-size: 25px;
   inline-size: 25px;
   inset-inline-start: 20px;
@@ -304,6 +286,8 @@
   display: grid;
   gap: 10px;
 }
+
+
 
 @media (width <= 767.9px) {
   .p-1__2fr {
@@ -536,8 +520,3 @@
     font-size: 157px;
   }
 }
-/* крч вся эта декоративщина съезжает из за разности отступов у блоков при разном разрешении
-/* В МОБИЛЬНОЙ ВЕРСИИ НЕ ЗАБУДЬ ДИВУ ДАТЬ ОТСТУПЫ   Присвой картинкам разные классы для распоряжения в грид сетке
-/*Чуваааак закинь main__title в отдельный контейнер с его <p> и т.д ты сможешь сделать правильные отступы и грид сетку
-/*Вообщем удачи тебе будущий я изменяй для header title разметку и пытайся сводить по пп ЧУВАААК Я НЕМНОГО ПОСИДЕЛ И НАДО ПРОСТО В ДЕВ ТУЛСАХ ПОМЕНЯТЬ ВЕРТИКАЛЬНОЕ РАЗРЕШЕНИЕ У ТЕБЯ ВСЕ ВСТАЛО ПОЧТИ!!!
-/* Свести по пп и у header вроде как 77.5vh добавить для всего переменные для переключения темы

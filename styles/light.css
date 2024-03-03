@@ -8,17 +8,19 @@
 
 
 .page.theme_light {
-  background-image: url(../images/cover-image-light.png);
+  --background-image: url(../images/cover-image-light.png);
+  background-position: center;
   background-size: cover; 
   background-attachment: fixed;
   --accent-color: #FF8DCB;
-  --accent-font: font-family: 'IBM Plex mono';
+  --accent-font: 'IBM Plex mono';
   --accent-font-color: #353430;
   --title-dark: #FFC2E6;
   --p-text: #353430;
   --p-title: #353430;
   --display-rec: none;
   --decorations: #353430;
+  --hover-border-color: rgba(50, 49, 45, 0.4);
   
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -26,5 +28,20 @@
   */
 }
 
-
-/*меняй тут темы*/
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-image: url(../images/cover-image-light.png);
+    background-position: center;
+    background-size: cover; 
+    background-attachment: fixed;
+    --accent-color: #FF8DCB;
+    --accent-font: 'IBM Plex mono';
+    --accent-font-color: #353430;
+    --title-dark: #FFC2E6;
+    --p-text: #353430;
+    --p-title: #353430;
+    --display-rec: none;
+    --decorations: #353430;
+    --hover-border-color: rgba(50, 49, 45, 0.4);
+  } 
+}

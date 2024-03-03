@@ -1,6 +1,6 @@
 :root {
   --accent-color: rgb(255, 0, 112);
-  --accent-font: font-family: 'IBM Plex mono';
+  --accent-font: 'IBM Plex mono';
   --accent-font-color: rgb(241, 178, 206);
   --title-dark: rgb(219, 0, 255);
   --p-text: rgb(0, 0, 40);
@@ -8,6 +8,8 @@
   --display-rec: block;
   --decorations: rgb(255, 0, 112);
   --light-shadow: rgb(255, 0, 112);
+  --hover-border-color: rgba(255, 0, 112, 0.4);
+  --background-image: url(../images/cover-image-dark.png);
 }
 /*
   Переменные для вашего проекта
